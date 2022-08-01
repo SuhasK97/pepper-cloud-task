@@ -1,5 +1,5 @@
 #success {
-  width: 200px;
+  width: 250px;
   height: 40px;
   position: relative;
   background: lightgreen;
@@ -33,7 +33,7 @@
 }
 
 #warning {
-  width: 200px;
+  width: 250px;
   height: 40px;
   position: relative;
   background: orange;
@@ -67,7 +67,7 @@
 }
 
 #white {
-  width: 200px;
+  width: 250px;
   height: 40px;
   position: relative;
   background: lightgray;
