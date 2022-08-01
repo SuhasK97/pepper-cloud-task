@@ -62,7 +62,7 @@ export default function BasicTabs() {
         sx={{ borderBottom: 1, borderColor: "divider" }}
         style={{ backgroundColor: "#f3f6f9" }}
       >
-        <Paper className="p-2 mx-2 d-flex">
+        <Paper className="p-2 mx-2 d-flex" elevation={6}>
           {stepperData.map((item) => (
             <Box className="me-4">
               <Stepper
