@@ -1,10 +1,20 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import SubNavbar from './SubNavbar';
+import * as React from "react";
+import PropTypes from "prop-types";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import SubNavbar from "./SubNavbar";
+import Stepper from "./Stepper";
+import { Paper } from "@mui/material";
+
+const stepperData = [
+  { type: "success", label: "step 1", iconName: "done" },
+  { type: "warning", label: "New", iconName: "none" },
+  { type: "white", label: "Working", iconName: "none" },
+  { type: "white", label: "Nurturing", iconName: "none" },
+  { type: "white", label: "Converted", iconName: "none" },
+];
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -32,11 +42,10 @@ TabPanel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-
 function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
   };
 }
 
@@ -48,18 +57,38 @@ export default function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: '100%' }} style={{backgroundColor:'#f3f6f9'}}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }} style={{backgroundColor:'#f3f6f9'}}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" textColor="orange" indicatorColor="secondary">
+    <Box sx={{ width: "100%" }} style={{ backgroundColor: "#f3f6f9" }}>
+      <Box
+        sx={{ borderBottom: 1, borderColor: "divider" }}
+        style={{ backgroundColor: "#f3f6f9" }}
+      >
+        <Paper className="p-2 mx-2 d-flex">
+          {stepperData.map((item) => (
+            <Box className="me-4">
+              <Stepper
+                type={item.type}
+                label={item.label}
+                iconName={item.iconName}
+              />
+            </Box>
+          ))}
+        </Paper>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="basic tabs example"
+          textColor="orange"
+          indicatorColor="secondary"
+        >
           <Tab label="Activity" {...a11yProps(0)} />
           <Tab label="Information" {...a11yProps(1)} />
         </Tabs>
-      </Box >
+      </Box>
       <TabPanel value={value} index={0}>
-        <SubNavbar/>
+        <SubNavbar />
       </TabPanel>
       <TabPanel value={value} index={1}>
-       Information
+        Information
       </TabPanel>
     </Box>
   );
