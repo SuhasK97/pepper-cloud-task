@@ -1,0 +1,67 @@
+
+.newTaskBox {
+    margin-top: -20px;
+}
+
+.newTask {
+    margin-top: -10px;
+    margin-left: -60px;
+}
+
+.taskName {
+    color: rgb(86, 86, 86);
+    font-weight: medium;
+    font-size: 17px;
+    margin-left: -90% !important;
+}
+
+.newTask__item {
+    width: 50%
+}
+
+.taskType {
+    margin-top: -100% !important;
+    border-radius: 4px;
+    height: 10%;
+    width: 80%;
+
+}
+
+.date1txt {
+    display: flex;
+    width: 600;
+    margin-left: 50px;
+    margin-top: 10px;
+
+}
+
+.date1input {
+
+    display: flex;
+    width: 600px;
+    padding-left: 50px;
+    margin-top: -10px;
+
+}
+
+.subject {
+    margin-top: -100% !important;
+    border-radius: 4px;
+    height: 10%;
+    width: 100%;
+}
+
+.subjecttext {
+    text-align: start;
+}
+
+.textarea {
+    border-radius: 4px;
+    height: 60%;
+    width: 100%;
+}
+
+.detailtextarea {
+    text-align: start;
+    margin-top: 15px;
+}
