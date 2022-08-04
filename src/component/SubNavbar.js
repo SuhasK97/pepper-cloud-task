@@ -49,7 +49,7 @@ export default function BasicTabs() {
   };
 
   return (
-    <div style={{ backgroundColor: "#f3f6f9" }} className="row overflow-hidden">
+    <div style={{ backgroundColor: "#f3f6f9" }} className="row overflow-hidden p-2 mx-2 d-flex flex-wrap">
       <div
         className="col-lg-8"
         style={{ border: "1px solid green", backgroundColor: "white" }}
